@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,15 +8,185 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="flex">
-    <div class="item">1</div>
-    <div class="item">2</div>
-    <div class="item">3</div>
-    <div class="item">4</div>
-    <div class="item">5</div>
-    <div class="item">6</div>
-    <div class="item">7</div>
-    <div class="item">8</div>
+  <div class="container">
+
+    <header>
+      <div class="logo">
+        <img src="img/logo.png" alt="logo">
+        <span>Celentano</span>
+      </div>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="#">Пицца</a></li>
+        <li><a href="#">Салаты</a></li> 
+        <li><a href="#">Первые блюда</a></li>
+        <li><a href="#">Основные блюда</a></li>
+        <li><a href="#">Десерты</a></li>
+        <li><a href="#">Напитки</a></li> 
+      </ul>
+    </nav>
+
+    <main>
+      <h2>Корзина</h2>
+      <div class="main_container">
+        <img src="img/picca_vkusno.png" alt="">
+        <div class="txt">
+          <p>ГОФРЕДО</p>
+          <p>вес: 440 г</p>
+          <p>диаметр: 28 см</p>
+        </div>
+        <form>
+          <input type="number"
+                 min="1" 
+                 max="10" 
+                 step="1" 
+                 value="1"
+                 name="kol"
+                 id="kol">
+        </form>
+        <div class="txt">
+          <p class="txt_price">97.00 грн</p>
+          <p>упаковка 7.00 грн</p>
+        </div>
+        <div class="txt_price_b">
+          <p>Итоговая сумма покупки: 114 грн</p>
+        </div>
+      </div>
+    </main>
+
+    <section>
+      <h2>Оформление заказа</h2>
+      <div class="section_container">
+        <div class="form">
+          <form action="/search.php" method="POST">
+            
+            <div>
+              <label>
+                <span>Имя :</span>
+                <input type="text" 
+                       name="name" 
+                       id="name"
+                       required>
+              </label>
+            </div>
+
+            <div>
+              <label>
+                <span>Выберите город :</span>
+                <select name="sity" id="sity">
+                  <option value="Краматорск">Краматорск</option>
+                  <option value="Славянск">Славянск</option>
+                  <option value="Дружковка">Дружковка</option>
+                  <option value="Константиновка">Константиновка</option>
+                  <option value="Алексеево_Дружковка">Алексеево-Дружковка</option>
+                </select>
+              </label>
+            </div>
+
+            <div>
+              <label>
+                <span>Адрес :</span>
+                <input type="text" 
+                       name="" 
+                       id=""
+                       required>
+              </label>
+            </div>
+
+            <div>
+              <label>
+                <span>Телефон :</span>
+                <input type="tel" 
+                       name="" 
+                       id=""
+                       required>
+              </label>
+            </div>
+
+            <div>
+              <label>
+                <span>Email :</span>
+                <input type="email" 
+                       name="" 
+                       id="">
+              </label>
+            </div>
+
+            <div>
+              <label>
+                <span>Дополнительно : </span>
+                <input type="checkbox" 
+                       name="" 
+                       id="">
+                <span>Салфетки</span>
+                <input type="checkbox" 
+                       name="" 
+                       id="">
+                <span>Посуда</span>
+              </label>
+            </div>
+
+            <div>
+              <label>
+                <span>Доставка : </span>
+                <input type="radio" 
+                       name="delivery" 
+                       id="taxci"
+                       value="taxci"
+                       checked>
+                <span>Такси</span>
+                <input type="radio" 
+                       name="delivery" 
+                       id="samov"
+                       value="samov">
+                <span>Самовывоз</span>
+              </label>
+            </div>
+
+            <div>
+              <label>
+                <span>Дополнительный комментарий : </span>
+                <textarea name="dop_txt" 
+                          id="dop_txt" 
+                          cols="30" 
+                          rows="10">
+                </textarea>
+              </label>
+            </div>
+            <div>
+              <label>
+                <input type="submit" 
+                       value="Оформить заказ"
+                       id="submit_btn"
+                       name="submit_btn">
+                <input type="checkbox" 
+                       name="rule" 
+                       id="rule"
+                       required>
+                <span>Я даю согласие на использование и обработку моих
+                  персональных данных, получение акционных предложений и скидок</span>
+              </label>
+            </div>
+          </form>
+        </div>
+
+        <div class="map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1315.5192040738925!2d37.592603705925896!3d48.74296308923248!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40df971bfd916889%3A0xa157c3ce159d72ec!2z0YPQuy4g0JTRgNGD0LbQsdGLLCAyMiwg0JrRgNCw0LzQsNGC0L7RgNGB0LosINCU0L7QvdC10YbQutCw0Y8g0L7QsdC70LDRgdGC0YwsIDg0MzAw!5e0!3m2!1sru!2sua!4v1618255165536!5m2!1sru!2sua" style="border:1px;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="footer_container">
+        <div>
+          <p>При оформлении заказа на сайте <br> Вы автоматически получаете 20% скидки на наше меню!</p>
+          <p>Оплата заказа только наличными.</p>
+          <p> Время работы доставки: с 9:00 до 22:00.</p>
+        </div>
+        <img class="img_1" src="img/pile-of-fresh-vegetables-removebg-preview.png" alt="">
+      </div>
+    </footer>
   </div>
 </body>
 </html>
